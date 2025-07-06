@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thetascape Sound Engine Test</title>
+    <!-- Load Tone.js from CDN -->
+    <script src="https://unpkg.com/tone@15.1.22/build/Tone.js"></script>
+</head>
+
+<body>
+    <button id="startBtn">Start Audio Engine</button>
+
+    <script type="module">
+        import ThetascapeSoundEngine from './dist/thetascape-sound-engine.js';
+
+        document.getElementById('startBtn').addEventListener('click', async () => {
+            try {
+                const engine = await ThetascapeSoundEngine.init();
+                console.log('Engine initialized:', engine);
+                engine.playSong(0);
+            } catch (err) {
+                console.error('Init failed:', err);
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+{
+  "name": "thetascape-sound-engine",
+  "version": "1.0.0",
+  "description": "A sound engine by Jason Snell",
+  "main": "dist/thetascape-sound-engine.js",
+  "module": "dist/thetascape-sound-engine.js",
+  "exports": {
+    "import": "./dist/thetascape-sound-engine.js",
+    "require": "./dist/thetascape-sound-engine.cjs"
+  },
+  "files": [
+    "dist/"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "audio",
+    "sound",
+    "engine",
+    "tonejs",
+    "music",
+    "synthesis"
+  ],
+  "author": "Jason Snell",
+  "license": "ISC",
+  "peerDependencies": {
+    "tone": "^15.0.0"
+  },
+  "devDependencies": {
+    "tone": "^15.1.22",
+    "vite": "^7.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/thetascape-sound-engine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/thetascape-sound-engine/issues"
+  },
+  "homepage": "https://github.com/yourusername/thetascape-sound-engine#readme"
+}
