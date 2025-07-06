@@ -36,10 +36,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/thetascape-sound-engine.git"
+    "url": "git+https://github.com/doradocodes/thetascape-sound-engine.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/thetascape-sound-engine/issues"
+    "url": "https://github.com/doradocodes/thetascape-sound-engine/issues"
   },
-  "homepage": "https://github.com/yourusername/thetascape-sound-engine#readme"
+  "homepage": "https://github.com/doradocodes/thetascape-sound-engine#readme"
 }
