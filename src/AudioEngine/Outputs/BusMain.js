@@ -25,6 +25,9 @@ class BusMain {
 
   // Returns array of 32 values in dB (range: ~[-100, 0])
   getLevels() {
+    if (!this.fft || typeof this.fft.getValue !== 'function') {
+      return new Array(16).fill(0);
+    }
     return this.fft.getValue(); // Float32Array of dB values
   }
 }

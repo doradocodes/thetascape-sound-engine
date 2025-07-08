@@ -7,8 +7,9 @@ import VisualizerColors from './VisualizerColors';
 import { VisualizerUtils } from './VisualizerUtils';
 import BrainwaveGenerator from './BrainwaveGenerator';
 
-const Visualizer = ({ getLevels, brainwaveID = SongIDs.BETA }) => {
+const Visualizer = ({ getLevels, brainwaveID }) => {
   
+  console.log("Visualizer: brainwaveID", brainwaveID);
   const visualizerBars = useRef(null);
   const generatorRef = useRef(null);
   const barCountRef = useRef(null);
@@ -66,23 +67,22 @@ const Visualizer = ({ getLevels, brainwaveID = SongIDs.BETA }) => {
   };
 
   const draw = (p5) => {
-    //if (!drawnBackgroundRef.current) {
-
-      const bg = VisualizerColors.getColors(brainwaveID).bgColors;
-      const gradient = p5.drawingContext.createLinearGradient(0, 0, 0, p5.height);
-      gradient.addColorStop(0.0, bg[0]);
-      gradient.addColorStop(0.5, bg[1]);
-      gradient.addColorStop(1.0, bg[2]);
-      p5.drawingContext.fillStyle = gradient;
-      p5.noStroke();
-      p5.rect(0, 0, p5.width, p5.height);
-      drawnBackgroundRef.current = true;
-    //}
     
+    const bg = VisualizerColors.getColors(brainwaveID).bgColors;
+    const gradient = p5.drawingContext.createLinearGradient(0, 0, 0, p5.height);
+    gradient.addColorStop(0.0, bg[0]);
+    gradient.addColorStop(0.5, bg[1]);
+    gradient.addColorStop(1.0, bg[2]);
+    p5.drawingContext.fillStyle = gradient;
+    p5.noStroke();
+    p5.rect(0, 0, p5.width, p5.height);
+    drawnBackgroundRef.current = true;
+  
 
     if (!visualizerBars.current || !getLevels || !generatorRef.current) return;
 
     const meters = getLevels();
+    //console.log("Visualizer: meters", meters);
 
     let binRange = [0, 16];
     let mirror = false;
@@ -115,9 +115,10 @@ const Visualizer = ({ getLevels, brainwaveID = SongIDs.BETA }) => {
     }
 
     const carrierWave = VisualizerUtils.processMeters(() => meters, visualizerBars.current.bars.length, binRange, mirror);
-    
+    //console.log("Visualizer: carrierWave", carrierWave);
     generatorRef.current.update();
     const modulatorWave = generatorRef.current.getModulatorWave();
+    //console.log("Visualizer: modulatorWave", modulatorWave);
 
     visualizerBars.current.updateAndDraw(carrierWave, modulatorWave);
   };

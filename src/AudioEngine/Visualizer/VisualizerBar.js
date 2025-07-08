@@ -1,6 +1,9 @@
 // VisualizerBar.js
 export default class VisualizerBar {
+
   constructor(brainwaveID, barWidth, containerHeight, colors) {
+
+    console.log("VisualizerBar: constructor", brainwaveID, barWidth, containerHeight, colors);
     this.brainwaveID = brainwaveID;
     this.barWidth = barWidth;
     this.containerHeight = containerHeight;
@@ -61,12 +64,14 @@ export default class VisualizerBar {
         this.maxWaveHeight = this.containerHeight * 2.75;
         this.modulationStrength = 0.115;
         break;
+        
+        //intro state
       default:
         this.carrierAmp = 1.0;
-        this.animSmoothing = 4;
-        this.minWaveHeight = this.containerHeight * 0.05;
+        this.animSmoothing = 1;
+        this.minWaveHeight = this.containerHeight;
         this.maxWaveHeight = this.containerHeight;
-        this.modulationStrength = 0.05;
+        this.modulationStrength = 0;
         break;
 
     }

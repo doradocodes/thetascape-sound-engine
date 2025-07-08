@@ -109,21 +109,22 @@ export default class AlphaSong extends Song {
         this.instruments.push(alphaSoftKey);
 
 
-        const alphaLoundBell = new Instrument("alphaLoundBell", {"C3": "alpha/a_lound_note_H5.mp3"}, Instrument.TYPE_STANDARD );
-        alphaLoundBell.notes = [
-            { time: "0:3:0", pitch: "C2"},
-            { time: "1:1:0", pitch: "D2"},
-            { time: "3:2:0", pitch: "G2"},
-            { time: "4:2:0", pitch: "A2"},
-        ];
-        alphaLoundBell.loopLength = "6m";
-        alphaLoundBell.loopTotal = 1;
-        alphaLoundBell.timingRange = 0.4;
-        alphaLoundBell.velocityRange = 0.3;
-        alphaLoundBell.skipChance = 0.2; 
-        alphaLoundBell.noteChance = 0.9;
-        alphaLoundBell.db = -30;
-        this.instruments.push(alphaLoundBell);
+        //TODO: buggy, often plays at very loud volumes
+        // const alphaLoundBell = new Instrument("alphaLoundBell", {"C3": "alpha/a_lound_note_H5.mp3"}, Instrument.TYPE_STANDARD );
+        // alphaLoundBell.notes = [
+        //     { time: "0:3:0", pitch: "C2"},
+        //     { time: "1:1:0", pitch: "D2"},
+        //     { time: "3:2:0", pitch: "G2"},
+        //     { time: "4:2:0", pitch: "A2"},
+        // ];
+        // alphaLoundBell.loopLength = "6m";
+        // alphaLoundBell.loopTotal = 1;
+        // alphaLoundBell.timingRange = 0.4;
+        // alphaLoundBell.velocityRange = 0.3;
+        // alphaLoundBell.skipChance = 0.2; 
+        // alphaLoundBell.noteChance = 0.9;
+        // alphaLoundBell.db = -30;
+        // this.instruments.push(alphaLoundBell);
 
 
     }

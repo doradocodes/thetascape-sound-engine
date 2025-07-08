@@ -86,16 +86,16 @@ const VisualizerColors = {
       default:
         return {
           barColors: [
-            '#111111', 
-            '#888888', 
-            '#ffffff', 
-            '#cccccc',
-            '#111111'
+            '#8A8FB6', 
+            '#aab5bf', 
+            '#D7E4F0', 
+            '#aab5bf',
+            '#8A8FB6'
           ],
           bgColors: [
-            '#111111', 
-            '#222222', 
-            '#111111'
+            '#8A8FB6', 
+            '#D7E4F0', 
+            '#8A8FB6'
           ],
         };
     }
