@@ -1,5 +1,6 @@
 import * as Tone from "tone";
-import { SongIDs, InstrumentIDs } from "./AudioEngine/Constants";
+import { SongIDs, SongFrequencies } from "./AudioEngine/Constants";
+import Visualizer from "./AudioEngine/Visualizer/Visualizer";
 
 const init = async () => {
     console.log("APP: Init ToneJS and Audio Engine");
@@ -29,5 +30,6 @@ const init = async () => {
 export default {
     init,
     SongIDs,
-    SongFrequencies
+    SongFrequencies,
+    Visualizer
 };

@@ -9,7 +9,12 @@ export default defineConfig({
             formats: ['es', 'cjs'],
         },
         rollupOptions: {
-            external: ['tone'],
+            external: [
+                'tone',
+                'react',
+                'react-dom',
+                'react-p5'
+            ],
             output: {
                 globals: {
                     tone: 'Tone'
