@@ -27,7 +27,7 @@ export default class Player {
         this.instrumentType = null;
 
         //Tone.Samplers need a test file to get started
-        const testTone = `dist/sounds/global/z_test_tone.mp3`;
+        const testTone = `./dist/sounds/global/z_test_tone.mp3`;
 
         this.player = new this.tone.Sampler({
             urls: {
