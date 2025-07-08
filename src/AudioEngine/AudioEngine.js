@@ -142,7 +142,7 @@ export default class AudioEngine {
 
   playIntroSound() {
     console.log("PLAYERS: Play intro");
-    const url = `./dist/sounds/intro/intro_H5.mp3`;
+    const url = `./../sounds/intro/intro_H5.mp3`;
 
     const introPlayer = new this.tone.Player({
       url: url,

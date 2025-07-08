@@ -1,6 +1,6 @@
 {
   "name": "thetascape-sound-engine",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A sound engine by Jason Snell",
   "main": "dist/thetascape-sound-engine.js",
   "module": "dist/thetascape-sound-engine.js",

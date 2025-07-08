@@ -46,7 +46,7 @@ export default class Song {
                 const uniqueKey = `${instrument.name}_${note}`;
 
                 // Build the full URL from your /sounds folder
-                const url = `./dist/sounds/${filePath}`;
+                const url = `./../sounds/${filePath}`;
 
                 fullSoundURLs[uniqueKey] = url;
             });
